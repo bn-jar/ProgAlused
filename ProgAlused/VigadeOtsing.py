@@ -1,4 +1,5 @@
 
+# coding: iso-8859-1 -*-
 # ei luba teha "import * from math"
 import math
 

@@ -6,7 +6,8 @@ from random import randint
 print("Tere maailm!")
 
 
-def tervitus() -> None:
+try: 
+    # 1
     kasutaja_nimi = input("Mis on sinu nimi? ")
 
     print("Tere maailm! Tervitan sind " + kasutaja_nimi)
@@ -14,15 +15,14 @@ def tervitus() -> None:
     vanus = input("Mis on sinu vanus? ")
 
     print(
-        "Tere maailm! Tervitan sind "
-        + kasutaja_nimi
-        + "! Sa oled "
-        + vanus
-        + " aastat vana."
-    )
+            "Tere maailm! Tervitan sind "
+            + kasutaja_nimi
+            + "! Sa oled "
+            + vanus
+            + " aastat vana."
+        )
 
-
-def muutuja_tuubid() -> None:
+    # 2
     # int
     vanus = 18
     print(type(vanus))
@@ -40,7 +40,7 @@ def muutuja_tuubid() -> None:
     print(type(kas_kaib_koolis))
 
 
-def arvuta_kommid() -> None:
+    # 3
     kommide_alg_arv = randint(1, 10)
     print("Laual on " + str(kommide_alg_arv) + " kommi")
 
@@ -51,7 +51,7 @@ def arvuta_kommid() -> None:
     print("Laual on nüüd " + str(kommid) + " kommi.")
 
 
-def puu_umbermoot() -> None:
+    # 4
     C = float(input("Mis on puu ümbermoot? "))
 
     d = C / math.pi
@@ -59,7 +59,7 @@ def puu_umbermoot() -> None:
     print("Puu läbimõõt on " + str(d))
 
 
-def ristkuliku_diagonaal() -> None:
+    # 5
     N = float(input("Mis on ristküliku pikkus? "))
     M = float(input("Mis on ristküliku laius? "))
 
@@ -68,7 +68,7 @@ def ristkuliku_diagonaal() -> None:
     print("Ristkülikukujulise maatüki diagonaal on " + str(d))
 
 
-def loogiline_viga() -> None:
+    # 6
     aeg = float(input("Mitu tundi kulus sõiduks? "))
     teepikkus = float(input("Mitu kilomeetrit sõitsid? "))
 
@@ -80,7 +80,7 @@ def loogiline_viga() -> None:
     print("Sinu kiirus oli " + str(kiirus) + " km/h")
 
 
-def aritmeetiline_keskmine() -> None:
+    # 7
     suvalised_arvud = array.array('i', (randint(1, 10) for i in range(5)))
 
     summa = sum(suvalised_arvud)
@@ -99,15 +99,15 @@ def aritmeetiline_keskmine() -> None:
 
     print("Jagatud: " + str(jagatud) + ", osa: " + str(osa))
 
-def joonista_konn() -> None:
+    # 8
     print("""
-    @..@
-   (----)
-  ( \\__/ )
-  ^^ "" ^^  
-    """)
+        @..@
+       (----)
+      ( \\__/ )
+      ^^ "" ^^  
+        """)
 
-def kolmnurga_umbermoot() -> None:
+    # 9
     a = randint(1, 10)
     b = randint(1, 10)
     c = randint(1, 10)
@@ -118,7 +118,7 @@ def kolmnurga_umbermoot() -> None:
 
     print("Kolmnurga ümbermööt on " + str(P))
 
-def pitsa() -> None:
+    # 10
     sobrad = randint(2, 5)
 
     pitsa_hind = 12.90
@@ -131,30 +131,6 @@ def pitsa() -> None:
 
     print(str(sobrad) + " sõpra ostsid koos pitsa, iga inimene pidi maksma " + str(makstud_inimese_kohta) + " eurot.")
 
-
-def main():
-    try:
-        tervitus()
-        print('\n')
-        muutuja_tuubid()
-        print('\n')
-        arvuta_kommid()
-        print('\n')
-        puu_umbermoot()
-        print('\n')
-        ristkuliku_diagonaal()
-        print('\n')
-        loogiline_viga()
-        print('\n')
-        aritmeetiline_keskmine()
-        print('\n')
-        joonista_konn()
-        print('\n')
-        kolmnurga_umbermoot()
-        print('\n')
-        pitsa()
-    except:
-        print("programmis tekkis viga.")
-        exit()
-
-main()
+except:
+    print("Programmis tekkis viga!")
+    exit()
